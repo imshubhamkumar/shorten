@@ -1,0 +1,59 @@
+.url_textbox {
+    padding: 20px;
+    margin-top: 10rem;
+    
+}
+
+.main-class {
+    padding: 1rem;
+}
+
+.center-align{
+    max-width: 40rem !important;
+    margin: auto;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+.create-btn {
+    background: #413f50 !important;
+    color: #ffffff !important;
+}
+
+.shorten-urlArea{
+    background-color: #413f50;
+    max-width: 30rem;
+    margin: auto;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+.theUrl{
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    width: 100%!important;
+    text-align: center;
+}
+
+.copy-btn {
+    float: right;
+}
+
+.original {
+    color: #5e5a69;
+    opacity: 0.5;
+   
+    /* overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:25rem;
+    display:inline-block; */
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;    
+    max-height: 48px;     
+    -webkit-line-clamp: 3; /* Write the number of 
+                              lines you want to be 
+                              displayed */
+    -webkit-box-orient: vertical;
+
+}
