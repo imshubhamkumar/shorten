@@ -13,7 +13,7 @@ app.use( cors({
 app.use(express.json());
 app.use('/', Shorten);
 
-mongoose.connect('mongodb://127.0.0.1:27017/shortenUrl',{
+mongoose.connect('mongodb+srv://myadmin:shubham@cluster0-omqkr.mongodb.net/test?retryWrites=true&w=majority/shortenUrl',{
       useNewUrlParser: true,
       useUnifiedTopology: true
   })
