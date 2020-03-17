@@ -6,7 +6,7 @@ const cors = require("cors");
 const Shorten = require('./controllers/shorten');
 
 app.use( cors({
-  origin: ['http://localhost:3000','http://127.0.0.1:3000'],
+  origin: ['https://5e7114d3fb36720008670344--jolly-shannon-25db88.netlify.com/','https://5e7114d3fb36720008670344--jolly-shannon-25db88.netlify.com/'],
   credentials: true
 }));
 
