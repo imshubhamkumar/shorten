@@ -24,10 +24,10 @@ class home extends Component {
      submitHandler = e => {
        e.preventDefault();
        console.log(this.state);
-       axios.post('http://localhost:5000/create_shorten', this.state)
+       axios.post('https://chhotume.herokuapp.com/create_shorten', this.state)
        .then((res) => {
          console.log(res);
-         document.getElementById('theUrl').value = 'http://localhost:5000/'+res.data.urlId;
+         document.getElementById('theUrl').value = 'https://chhotume.herokuapp.com/'+res.data.urlId;
          document.getElementById('original').innerHTML = res.data.theUrl;
          document.getElementById('copy').disabled = false;
        })
