@@ -29,7 +29,7 @@ class home extends Component {
          console.log(res);
          document.getElementById('theUrl').value = 'http://localhost:5000/'+res.data.urlId;
          document.getElementById('original').innerHTML = res.data.theUrl;
-         document.getElementsByClassName('shorten-urlArea').style.visibility = "show"
+         document.getElementById('copy').disabled = false;
        })
        .catch((err) => {
          console.log(err);
@@ -47,9 +47,10 @@ class home extends Component {
             </div>
           </div>
         </div>
+        <div id="shorten-urlArea">
         <div className="shorten-urlArea card" id="shorten-urlArea">
         <div  className="copy-btn">
-            <button type="button" title="copy to clipboard" onClick={() => this.copyCodeToClipboard()} className="btn btn-clipboard float-right" title data-original-title="Copy to clipboard">Copy</button>
+            <button type="button" title="copy to clipboard" id="copy"  onClick={() => this.copyCodeToClipboard()} className="btn btn-clipboard float-right" title data-original-title="Copy to clipboard">Copy</button>
         </div>
             <div className="card-body">
                 <input className="theUrl" id="theUrl"
@@ -61,7 +62,9 @@ class home extends Component {
                 <span className="original" id="original"></span>
             </div>
         </div>
-      </div>
+      
+        </div>
+        </div>
     );
   }
 }

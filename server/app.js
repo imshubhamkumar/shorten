@@ -13,13 +13,20 @@ app.use( cors({
 app.use(express.json());
 app.use('/', Shorten);
 
-mongoose.connect('mongodb://127.0.0.1:27017/shortenUrl',{
+mongoose
+  .connect(
+    "mongodb+srv://cluster0-e3uk1.mongodb.net/test?retryWrites=true&w=majority",
+    {
+      dbName: "shortenUrl",
+      user: "shubham",
+      pass: "shubham",
       useNewUrlParser: true,
       useUnifiedTopology: true
-  })
+    }
+  )
   .then(() => {
-  console.log('The mongoose database is connected');
-});
+    console.log("The mongoose database is connected");
+  });
 
 
 
