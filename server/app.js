@@ -1,16 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-const cors = require("cors");
 
 const Shorten = require('./controllers/shorten');
 
-app.use( cors({
-  origin: ['https://5e7114d3fb36720008670344--jolly-shannon-25db88.netlify.com/','https://5e7114d3fb36720008670344--jolly-shannon-25db88.netlify.com/'],
-  credentials: true
-}));
+
 
 app.use(express.json());
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use('/', Shorten);
 
 mongoose
